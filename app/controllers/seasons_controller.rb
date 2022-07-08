@@ -52,7 +52,7 @@ class SeasonsController < ApplicationController
     @season.destroy
 
     respond_to do |format|
-      format.html { redirect_to seasons_url, notice: "Season was successfully destroyed." }
+      format.html { redirect_to seasons_url, notice: "Season was successfully deleted." }
       format.json { head :no_content }
     end
   end

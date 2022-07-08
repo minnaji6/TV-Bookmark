@@ -6,15 +6,15 @@ class Show < ApplicationRecord
     has_many :seasons, through: :episodes
 
 
-    validates :image, presence: true
+    # validates :image, presence: true
    
 
-    validates :name, 
-          :presence => {:message => "Show can't be blank." },
-          :uniqueness => {:message => "Show already exists."},
-          :length => { :maximum => 40, :message => "Must be less than 40 characters"}
+    # validates :name, 
+    #       :presence => {:message => "Show can't be blank." },
+    #       :uniqueness => {:message => "Show already exists."},
+    #       :length => { :maximum => 40, :message => "Must be less than 40 characters"}
 
-    validate :permited_image
+    # validate :permited_image
 end
 
 def permited_image
