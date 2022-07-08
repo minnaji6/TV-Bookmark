@@ -65,6 +65,6 @@ class ShowsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def show_params
-      params.fetch(:show, {:name => "", :description => "", :tag_id => "", :season_id => ""})
+      params.require(:show).permit(:name, :image)
     end
 end

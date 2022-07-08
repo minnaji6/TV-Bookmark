@@ -65,6 +65,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.fetch(:comment, {})
+      params.require(:comment).permit(:description, :tag_id, :season_id)
     end
 end
