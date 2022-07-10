@@ -9,12 +9,15 @@ csv.each do |row|
     s = Show.new
     s.name = row['name']
     s.image = row['image']
-    s.save 
+    s.save
+    puts "Seeded #{s.name}"
 end
 
 
 puts "Seeding tags... #"
 Tag.create([{tag:"ongoing"},{tag:"cancelled"}, {tag:"upcoming"}, {tag:"finished"}, {tag:"watching"}, {tag:"want_to_watch"}])
+
+
 
 
 puts "Seeding comments... 📝 "
@@ -34,6 +37,7 @@ csv.each do |row|
     e.season_id = row['season_id']
     e.show_id = row['show_id']
     e.save
+    puts "Seeded #{e.show_id}"
 end
 
 
@@ -41,7 +45,7 @@ puts "Seeding seasons... 🎭"
 csv.each do |row|
     sn = Season.new
     sn.season_number = row['season_number']
-    sn.save  
+    sn.save
 end
 
 puts "📺 Done seeding! 🎞"

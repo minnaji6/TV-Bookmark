@@ -6,15 +6,15 @@ class Show < ApplicationRecord
     has_many :seasons, through: :episodes
 
 
-    # validates :image, presence: true
+    validates :image, presence: true
    
 
-    # validates :name, 
-    #       :presence => {:message => "Show can't be blank." },
-    #       :uniqueness => {:message => "Show already exists."},
-    #       :length => { :maximum => 40, :message => "Must be less than 40 characters"}
+    validates :name, 
+          :presence => {:message => "Show can't be blank." },
+          :uniqueness => {:message => "Show already exists."},
+          :length => { :maximum => 40, :message => "Must be less than 40 characters"}
 
-    # validate :permited_image
+    validate :permited_image
 end
 
 def permited_image
@@ -23,7 +23,7 @@ def permited_image
     end
 end
 
-def self.search_by_tag_and_name(tag, name)
+def self.search_by_tag_and_name(tag="nil", name="nil")
     if tag && name
         Show.join(:comments).where("tags.tag LIKE ? AND shows.name LIKE ?", "%#{tag}%", "%#{name}%")
     elsif tag
