@@ -18,8 +18,6 @@ puts "Seeding tags... #"
 Tag.create([{tag:"ongoing"},{tag:"cancelled"}, {tag:"upcoming"}, {tag:"finished"}, {tag:"watching"}, {tag:"want_to_watch"}])
 
 
-
-
 puts "Seeding comments... 📝 "
 csv.each do |row|
     c = Comment.new

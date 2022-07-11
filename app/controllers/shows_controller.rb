@@ -36,6 +36,8 @@ class ShowsController < ApplicationController
     end
   end
 
+  # seach contro
+
   # PATCH/PUT /shows/1 or /shows/1.json
   def update
     respond_to do |format|
