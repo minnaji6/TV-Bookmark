@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Grid, Card, CardMedia, CardContent, Typography, CardActions, Button }  from "@mui/material";
 
 
-const FetchCards = () => {
+const FetchCardDetails = () => {
     const [cards, setCards] = useState([])
 
     useEffect(() => {
@@ -49,4 +49,4 @@ const FetchCards = () => {
         </Grid>
     )
 }
-export default FetchCards;
+export default FetchCardDetails;

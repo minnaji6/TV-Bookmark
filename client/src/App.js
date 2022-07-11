@@ -8,7 +8,7 @@ import darkTheme from './Theme/dark';
 import Container1 from './Theme/Componets.js/Container1';
 import { darkModeAction } from './actions/config_action';
 import { useDispatch, useSelector } from 'react-redux';
-import FetchCards from './Componets/FetchCards';
+import FetchCardsHome from './Componets/FetchCardsHome';
 
 
 
@@ -38,9 +38,9 @@ function App() {
         <Button onClick={() => themeChange('dark')}>Dark Mode</Button>
         <Button onClick={() => themeChange('light')}>Light Mode</Button>
       </nav>
-      {/* <NavBar/> 
-      <Home/> */}
-      <FetchCards/>
+      <NavBar/> 
+      <Home/>
+      <FetchCardsHome/>
       </Container1>
      
 
