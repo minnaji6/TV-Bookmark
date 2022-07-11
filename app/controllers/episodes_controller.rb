@@ -4,11 +4,13 @@ class EpisodesController < ApplicationController
     # GET /episodes or /episodes.json
     def index
         @episodes = Episode.all
+        render json: @episodes
     end
     
 
     # GET /episodes/1 or /episodes/1.json
     def show
+        render json: @episode
     end
 
     # GET /episodes/new

@@ -19,7 +19,9 @@ const FetchCards = () => {
 
            axios.delete('http://localhost:3000/shows/' + id)
            .then(res => setCards(res.data))
+           console.log(setCards)
     } 
+
 
     
 
@@ -38,9 +40,6 @@ const FetchCards = () => {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            {/* <Button onClick={() =>Update(card.id)}size="small">Edit</Button> */}
-                            {/* <Button onClick={(e) =>Remove(card.id, e)}size="small">Delete</Button> */}
-                            {/* <Button onClick={() =>Update(card.id)}size="small">Edit</Button> */}
                             <Button size="small" onClick={()=> Delete(card.id)}> Delete</Button>
                             <Button size="small" > Edit</Button>
                          </CardActions>

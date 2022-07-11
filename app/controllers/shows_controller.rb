@@ -4,10 +4,12 @@ class ShowsController < ApplicationController
   # GET /shows or /shows.json
   def index
     @shows = Show.all
+    render json: @shows
   end
 
   # GET /shows/1 or /shows/1.json
   def show
+   render json: @show
   end
 
   # GET /shows/new

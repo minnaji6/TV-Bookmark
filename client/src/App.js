@@ -38,10 +38,9 @@ function App() {
         <Button onClick={() => themeChange('dark')}>Dark Mode</Button>
         <Button onClick={() => themeChange('light')}>Light Mode</Button>
       </nav>
-      <NavBar/> 
-      <Home/>
+      {/* <NavBar/> 
+      <Home/> */}
       <FetchCards/>
-
       </Container1>
      
 

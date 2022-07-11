@@ -4,10 +4,12 @@ class SeasonsController < ApplicationController
   # GET /seasons or /seasons.json
   def index
     @seasons = Season.all
+    render json: @seasons
   end
 
   # GET /seasons/1 or /seasons/1.json
   def show
+    render json: @season
   end
 
   # GET /seasons/new

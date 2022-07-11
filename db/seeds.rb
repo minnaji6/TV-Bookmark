@@ -28,11 +28,11 @@ end
 
 puts "Seeding episodes... 📺 "
 csv.each do |row|
-    c = Episode.new
-    c.episode_number = row['episode_number']
-    c.season_id = row['season_id']
-    c.show_id = row['show_id']
-    c.save
+    e = Episode.new
+    e.episode_number = row['episode_number']
+    e.season_id = row['season_id']
+    e.show_id = row['show_id']
+    e.save
 end
 
 puts "Seeding seasons... 🎭"
