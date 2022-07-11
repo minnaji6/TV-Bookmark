@@ -1,5 +1,6 @@
 import './App.css';
 import HomeLight from './Componets/HomeLight';
+import NavBarLight from './Componets/NavBarLight';
 
 
 
@@ -7,7 +8,7 @@ import HomeLight from './Componets/HomeLight';
 function App() {
   return (
     <>
-    <HomeLight/>
+    <NavBarLight/>
      </>
   );
 }
