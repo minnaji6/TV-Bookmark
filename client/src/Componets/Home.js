@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
 
-function HomeLight() {
+function Home() {
   return (
     <>
    
@@ -50,4 +50,4 @@ function HomeLight() {
   );
 }
 
-export default HomeLight;
+export default Home;

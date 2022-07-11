@@ -10,7 +10,6 @@ csv.each do |row|
     s.name = row['name']
     s.image = row['image']
     s.save
-    puts "Seeded #{s.name}"
 end
 
 
@@ -27,17 +26,14 @@ csv.each do |row|
     c.save
 end
 
-
-puts "Seeding episodes... 📺"
+puts "Seeding episodes... 📺 "
 csv.each do |row|
-    e = Episode.new
-    e.episode_number = row['episode_number']
-    e.season_id = row['season_id']
-    e.show_id = row['show_id']
-    e.save
-    puts "Seeded #{e.show_id}"
+    c = Episode.new
+    c.episode_number = row['episode_number']
+    c.season_id = row['season_id']
+    c.show_id = row['show_id']
+    c.save
 end
-
 
 puts "Seeding seasons... 🎭"
 csv.each do |row|

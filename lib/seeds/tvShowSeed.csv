@@ -1,13 +1,13 @@
-﻿name,image,season_number,episode_number,show_id,season_id,tag,description,tag_id
-Umbrella Academy ,https://artworks.thetvdb.com/banners/series/353764/posters/5efd5534a2ce9.jpg,1,8,1,1,ongoing,Really love this one can't wait for season 2,1
-The Flash,https://artworks.thetvdb.com/banners/posters/279121-5.jpg,2,12,2,2,cancelled,Stopped at mid season finale,2
-The Simpsons,https://artworks.thetvdb.com/banners/posters/71663-15.jpg,3,2,3,3,watching,this show is hilarious,5
-The Walkinng Dead,https://artworks.thetvdb.com/banners/v4/series/153021/posters/60fd8577d1a96.jpg,4,5,4,4,want_to_watch,i need to restart this show,6
-The Big Bang Theory,https://artworks.thetvdb.com/banners/posters/80379-18.jpg,4,2,5,4,ongoing,hilarious,1
-Brooklyn Nine-Nine,https://artworks.thetvdb.com/banners/posters/269586-11.jpg,2,1,6,2,upcoming,restart episode 6,3
-The Cleaning Lady,https://artworks.thetvdb.com/banners/v4/series/402365/posters/61cf6eeba7b9f.jpg,1,1,7,1,watching,omg cant believe they killed off ***,5
-Good Girls,https://artworks.thetvdb.com/banners/posters/328577-4.jpg,3,2,8,3,cancelled,so sad the cancelled this,2
-Chuck,https://artworks.thetvdb.com/banners/posters/80348-1.jpg,3,1,9,3,finished,amazing show need to rewatch when free,4
-Scorpion,https://artworks.thetvdb.com/banners/posters/281630-1.jpg,1,1,10,1,want_to_watch,great show,6
-A Million Little Things,https://artworks.thetvdb.com/banners/v4/series/350667/posters/6147a3866ebf1.jpg,2,2,11,2,watching,wow ,5
-Manifest,https://artworks.thetvdb.com/banners/series/349271/posters/62024749.jpg,3,1,12,3,cancelled,interesting concept,2
+﻿1,name,image,season_number,episode_number,show_id,season_id,tag,description,tag_id
+2,Umbrella Academy ,https://artworks.thetvdb.com/banners/series/353764/posters/5efd5534a2ce9.jpg,1,8,1,1,ongoing,Really love this one can't wait for season 2,1
+3,The Flash,https://artworks.thetvdb.com/banners/posters/279121-5.jpg,2,12,2,2,cancelled,Stopped at mid season finale,2
+4,The Simpsons,https://artworks.thetvdb.com/banners/posters/71663-15.jpg,3,2,3,3,watching,this show is hilarious,5
+5,The Walkinng Dead,https://artworks.thetvdb.com/banners/v4/series/153021/posters/60fd8577d1a96.jpg,4,5,4,4,want_to_watch,i need to restart this show,6
+6,The Big Bang Theory,https://artworks.thetvdb.com/banners/posters/80379-18.jpg,4,2,5,4,ongoing,hilarious,1
+7,Brooklyn Nine-Nine,https://artworks.thetvdb.com/banners/posters/269586-11.jpg,2,1,6,2,upcoming,restart episode 6,3
+8,The Cleaning Lady,https://artworks.thetvdb.com/banners/v4/series/402365/posters/61cf6eeba7b9f.jpg,1,1,7,1,watching,omg cant believe they killed off ***,5
+9,Good Girls,https://artworks.thetvdb.com/banners/posters/328577-4.jpg,3,2,8,3,cancelled,so sad the cancelled this,2
+10,Chuck,https://artworks.thetvdb.com/banners/posters/80348-1.jpg,3,1,9,3,finished,amazing show need to rewatch when free,4
+11,Scorpion,https://artworks.thetvdb.com/banners/posters/281630-1.jpg,1,1,10,1,want_to_watch,great show,6
+12,A Million Little Things,https://artworks.thetvdb.com/banners/v4/series/350667/posters/6147a3866ebf1.jpg,2,2,11,2,watching,wow ,5
+13,Manifest,https://artworks.thetvdb.com/banners/series/349271/posters/62024749.jpg,3,1,12,3,cancelled,interesting concept,2
