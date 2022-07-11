@@ -9,7 +9,7 @@ function HomeLight() {
 
 <br/>
 <div className="logo">
-<img src="https://thumbs4.imagebam.com/37/ed/85/MEBNMNV_t.png" alt="LOGO"/>
+<img src="https://i.ibb.co/LppH4B9/Screen-Shot-2022-07-11-at-10-48-58-AM-removebg-preview.png" alt="LOGO"/>
 </div>
 <br/>
 
