@@ -2,7 +2,7 @@ import React from 'react'
 
 function AddShows() {
   return (
-    <div>AddShows</div>
+    <div>Shows Form</div>
   )
 }
 

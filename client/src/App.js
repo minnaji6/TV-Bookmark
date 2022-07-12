@@ -10,7 +10,7 @@ import { darkModeAction } from './actions/config_action';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AddShows from './Componets/AddShows';
-import ViewShows from './Componets/ViewShows';
+import ManageShows from './Componets/ManageShows';
 
 function App() {
 
@@ -37,7 +37,7 @@ function App() {
       <NavBar/> 
       <Routes>
           <Route path="/home" element={<Home/>}></Route>
-          <Route path="/manageShows" element={<ViewShows/>}></Route>
+          <Route path="/manageShows" element={<ManageShows/>}></Route>
           <Route path="/show/new" element={<AddShows/>} ></Route>
           
       </Routes>
