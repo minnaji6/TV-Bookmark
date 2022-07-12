@@ -8,10 +8,9 @@ import darkTheme from './Theme/dark';
 import Container1 from './Theme/Componets.js/Container1';
 import { darkModeAction } from './actions/config_action';
 import { useDispatch, useSelector } from 'react-redux';
-import FetchCardsHome from './Componets/FetchCardsHome';
-
-
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AddShows from './Componets/AddShows';
+import ViewShows from './Componets/ViewShows';
 
 function App() {
 
@@ -31,13 +30,17 @@ function App() {
     dispatch(darkModeAction(value))
   }
   return (
+    <Router>
     <div className="App">
     <ThemeProvider theme={config.darkMode === "light" ? lightTheme : darkTheme}>
     <Container1 >
       <NavBar/> 
-     
-      {/* <Home/> */}
-      <FetchCardsHome/>
+      <Routes>
+          <Route path="/home" element={<Home/>}></Route>
+          <Route path="/manageShows" element={<ViewShows/>}></Route>
+          <Route path="/show/new" element={<AddShows/>} ></Route>
+          
+      </Routes>
       <nav style={{ padding: '2rem 0 ', textAlign: 'center' }}>
         <Button onClick={() => themeChange('dark')}>Dark Mode</Button>
         <Button onClick={() => themeChange('light')}>Light Mode</Button>
@@ -47,6 +50,7 @@ function App() {
     </ThemeProvider>
    
    </div>
+    </Router>
   );
 }
 

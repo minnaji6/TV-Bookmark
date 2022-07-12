@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
 
-function NavBarLight() {
+function NavBar() {
   return (
     <>
     <div className="App">
@@ -15,9 +15,9 @@ function NavBarLight() {
 
 <div className="App-nav">
 <ButtonGroup variant="contained" aria-label="outlined primary button group">
-  <Button>HOME</Button>
-  <Button>MANAGE SHOWS</Button>
-  <Button>ADD SHOW</Button>
+  <Button href="/home" >HOME</Button>
+  <Button href="/manageShows">MANAGE SHOWS</Button>
+  <Button href="/show/new">ADD NEW SHOW</Button>
 </ButtonGroup>
 
 </div>
@@ -31,4 +31,4 @@ function NavBarLight() {
   );
 }
 
-export default NavBarLight;
+export default NavBar;
