@@ -16,8 +16,8 @@ function NavBarLight() {
 <div className="App-nav">
 <ButtonGroup variant="contained" aria-label="outlined primary button group">
   <Button>HOME</Button>
-  <Button>VIEW SHOWS</Button>
-  <Button>EDIT SHOWS</Button>
+  <Button>MANAGE SHOWS</Button>
+  <Button>ADD SHOW</Button>
 </ButtonGroup>
 
 </div>

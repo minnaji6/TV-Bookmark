@@ -1,6 +1,7 @@
-import React, { useState, useEffect} from 'react'
-import axios from 'axios'
-import { Grid, Card, CardMedia, CardContent, Typography, CardActions, Button }  from "@mui/material";
+import React, { useRef, useState, useEffect} from 'react';
+import axios from 'axios';
+import {motion} from 'framer-motion';
+import "../App.css"
 
 
 const FetchCardsHome = () => {
@@ -11,44 +12,20 @@ const FetchCardsHome = () => {
         .then(res => setCards(res.data))
         
     }, [])
-
-     const Delete = (id) => {
-           setCards(prevCards=> {
-            return prevCards.filter(card=> card.id != id)
-           })
-
-           axios.delete('http://localhost:3000/shows/' + id)
-           .then(res => setCards(res.data))
-           console.log(setCards)
-    } 
-
-
-    
-
     return (
         <div className="App">
-        <Grid container spacing={3}>
-            {cards.map(card => (
-                <Grid item xs={12} sm={6} md={3} key={card.id}>
-                    <Card>
-                        <CardMedia style = {{ height: 3, paddingTop: '56%'}}
-                            image={card.image}
-                            title={card.name}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
-                                {card.name}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" onClick={()=> Delete(card.id)}> Delete</Button>
-                            <Button size="small" > Edit</Button>
-                         </CardActions>
-                    </Card>
-                </Grid>
-            ))}
-        </Grid>
-    </div>
-    )
+        <motion.div className= "carousel">
+            <motion.div drag="x" className= "inner-carousel">
+            {cards.map(card => {
+                return(
+                    <motion.div className= "item"  key={card.id}>
+                    <img src={card.image} alt={card.name}/>
+                    </motion.div>
+                );
+            })}
+             </motion.div>
+        </motion.div>
+        </div>
+    );
 }
 export default FetchCardsHome;

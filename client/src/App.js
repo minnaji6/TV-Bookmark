@@ -34,17 +34,16 @@ function App() {
     <div className="App">
     <ThemeProvider theme={config.darkMode === "light" ? lightTheme : darkTheme}>
     <Container1 >
-    <nav style={{ padding: '2rem 0 ', textAlign: 'center' }}>
+      <NavBar/> 
+     
+      {/* <Home/> */}
+      <FetchCardsHome/>
+      <nav style={{ padding: '2rem 0 ', textAlign: 'center' }}>
         <Button onClick={() => themeChange('dark')}>Dark Mode</Button>
         <Button onClick={() => themeChange('light')}>Light Mode</Button>
       </nav>
-      <NavBar/> 
-      <Home/>
-      <FetchCardsHome/>
       </Container1>
      
-
-      
     </ThemeProvider>
    
    </div>
