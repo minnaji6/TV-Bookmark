@@ -54,11 +54,11 @@ const config = useSelector(state => state.config)
                             <Typography gutterBottom variant="h5" component="h2">
                                 {card.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                               Render comments here
+                            <Typography variant="caption" color="text.secondary" backgroundColor="#ed953c" fontSize="1em" fontWeight="bold">
+                            {card.show_comments}
                             </Typography>
                             <Typography variant="subtitle1" color="textSecondary" component="p"> 
-                                <Button variant="contained" size="small" color="inherit" key={card.id}>ONGOING</Button>
+                                <Button variant="contained" size="small" color="inherit" key={card.id}>{card.show_tags}</Button>
                             </Typography>
                         </CardContent>
                         <CardActions style={config.darkMode === "light" ? {backgroundColor: "white"} : {backgroundColor: "black"}}>
