@@ -11,6 +11,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AddShows from './Componets/AddShows';
 import ManageShows from './Componets/ManageShows';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import {configureStore} from '@reduxjs/toolkit'
 
 function App() {
 
@@ -42,8 +45,8 @@ function App() {
           
       </Routes>
       <nav style={{ padding: '2rem 0 ', textAlign: 'center' }}>
-        <Button onClick={() => themeChange('dark')}>Dark Mode</Button>
-        <Button onClick={() => themeChange('light')}>Light Mode</Button>
+        <Button onClick={() => themeChange('dark')}><DarkModeIcon/></Button>
+        <Button onClick={() => themeChange('light')}><LightModeIcon/></Button>
       </nav>
       </Container1>
      

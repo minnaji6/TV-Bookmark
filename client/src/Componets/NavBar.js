@@ -1,5 +1,8 @@
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import HomeIcon from '@mui/icons-material/Home';
+import ManageSearchIcon from '@mui/icons-material/ManageSearch';
+import QueuePlayNextIcon from '@mui/icons-material/QueuePlayNext';
 
 
 function NavBar() {
@@ -15,9 +18,9 @@ function NavBar() {
 
 <div className="App-nav">
 <ButtonGroup variant="contained" aria-label="outlined primary button group">
-  <Button href="/home" >HOME</Button>
-  <Button href="/manageShows">MANAGE SHOWS</Button>
-  <Button href="/show/new">ADD NEW SHOW</Button>
+  <Button href="/home" ><HomeIcon/>HOME</Button>
+  <Button href="/manageShows"><ManageSearchIcon/>MANAGE SHOWS</Button>
+  <Button href="/show/new"><QueuePlayNextIcon/> ADD NEW SHOW</Button>
 </ButtonGroup>
 
 </div>

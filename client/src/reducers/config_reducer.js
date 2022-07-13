@@ -1,6 +1,4 @@
-import {
-    DARK_MODE
-} from '../actions/types';
+import { DARK_MODE } from '../actions/types';
 
 export default function(state={}, action) {
     switch(action.type) {

@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import FetchCardDetails from './FetchCardDetails';
+import SearchIcon from '@mui/icons-material/Search';
 
 
 function ManageShows() {
@@ -15,7 +16,7 @@ function ManageShows() {
       <input type="text" placeholder="SEARCH SHOWS" />
       <br/>
 
-      <Button variant="contained">SEARCH</Button>
+      <Button variant="contained"><SearchIcon/>SEARCH</Button>
 
       </div>
 

@@ -1,12 +1,10 @@
 import React, { useState, useEffect} from 'react'
 import axios from 'axios'
-import { ThemeProvider } from 'styled-components';
-import lightTheme from '../Theme/light';
-import darkTheme from '../Theme/dark';
-import Container1 from '../Theme/Componets.js/Container1';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import EditIcon from '@mui/icons-material/Edit';
 import { useDispatch, useSelector } from 'react-redux';
 import { darkModeAction } from '../actions/config_action';
-import { Grid, Card, CardMedia, CardContent, Typography, CardActions, Button }  from "@mui/material";
+import { Grid, Card, CardMedia, CardContent, Typography, CardActions, Button, Chip, Box }  from "@mui/material";
 
 
 const FetchCardDetails = () => {
@@ -53,17 +51,26 @@ const config = useSelector(state => state.config)
                         <CardContent style={config.darkMode === "light" ? {backgroundColor: "white"} : {backgroundColor: "#254cac"}}>
                             <Typography gutterBottom variant="h5" component="h2">
                                 {card.name}
+                                <Chip label="primary" label={card.show_tags} color={card.show_tags === 'cancelled' ? 'error' : card.show_tags === 'watching' ? 'success' : card.show_tags === 'upcoming' ? 'info' : card.show_tags === 'want to watch' ? 'warning' : 'primary'}/>
                             </Typography>
-                            <Typography variant="caption" color="text.secondary" backgroundColor="#ed953c" fontSize="1em" fontWeight="bold">
+                            <div style={{backgroundColor:"#1e81b0"}}>
+                            <Typography variant="caption" color="text.secondary"  fontSize="1em" fontWeight="bold">
                             {card.show_comments}
                             </Typography>
+                            </div>
+                            <br/>
                             <Typography variant="subtitle1" color="textSecondary" component="p"> 
-                                <Button variant="contained" size="small" color="inherit" key={card.id}>{card.show_tags}</Button>
+                               <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
+                                SEASON  
+                                <Chip label="primary" label={card.show_season}/>
+                                EPISODE  
+                                <Chip label="primary" label={card.show_episode}/>
+                                </Box>
                             </Typography>
                         </CardContent>
                         <CardActions style={config.darkMode === "light" ? {backgroundColor: "white"} : {backgroundColor: "black"}}>
-                            <Button size="small" onClick={()=> Delete(card.id)}> Delete</Button>
-                            <Button size="small" > Edit</Button>
+                            <Button size="small" onClick={()=> Delete(card.id)}> <DeleteForeverIcon/></Button>
+                            <Button size="small" > <EditIcon/> </Button>
                          </CardActions>
                     </Card>
                 </Grid>
