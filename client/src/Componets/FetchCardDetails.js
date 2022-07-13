@@ -51,7 +51,7 @@ const config = useSelector(state => state.config)
                         <CardContent style={config.darkMode === "light" ? {backgroundColor: "white"} : {backgroundColor: "#254cac"}}>
                             <Typography gutterBottom variant="h5" component="h2">
                                 {card.name}
-                                <Chip label="primary" label={card.show_tags} color={card.show_tags === 'cancelled' ? 'error' : card.show_tags === 'watching' ? 'success' : card.show_tags === 'upcoming' ? 'info' : card.show_tags === 'want to watch' ? 'warning' : 'primary'}/>
+                                <Chip label={card.show_tags} color={card.show_tags === 'cancelled' ? 'error' : card.show_tags === 'watching' ? 'success' : card.show_tags === 'upcoming' ? 'info' : card.show_tags === 'want to watch' ? 'warning' : 'primary'}/>
                             </Typography>
                             <div style={{backgroundColor:"#1e81b0"}}>
                             <Typography variant="caption" color="text.secondary"  fontSize="1em" fontWeight="bold">
@@ -59,12 +59,12 @@ const config = useSelector(state => state.config)
                             </Typography>
                             </div>
                             <br/>
-                            <Typography variant="subtitle1" color="textSecondary" component="p"> 
+                            <Typography  > 
                                <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
                                 SEASON  
-                                <Chip label="primary" label={card.show_season}/>
+                                <Chip label={card.show_season}/>
                                 EPISODE  
-                                <Chip label="primary" label={card.show_episode}/>
+                                <Chip label={card.show_episode}/>
                                 </Box>
                             </Typography>
                         </CardContent>
