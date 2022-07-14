@@ -3,18 +3,29 @@ import axios from 'axios';
 import "../App.css"
 import { useDispatch } from 'react-redux';
 import { addShows } from '../reducers/showSlice'
-
+import { useParams } from 'react-router-dom';
 
 
 const ShowsPage = () => {
     const dispatch = useDispatch();
+    // const data = useSelector(getSelectedShow)
 
     useEffect(() => {
         axios.get('http://localhost:3000/shows/')
         .then(res =>  dispatch(addShows(res.data)))
+        console.log(shows)
     }, [])
+
+    
+
+
     return (
-        <div></div>
+    
+        <div>
+           
+
+        </div>
+
         )
     }
     export default ShowsPage;

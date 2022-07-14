@@ -5,7 +5,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import { useDispatch, useSelector } from 'react-redux';
 import { darkModeAction } from '../actions/config_action';
 import { Grid, Card, CardMedia, CardContent, Typography, CardActions, Button, Chip, Box }  from "@mui/material";
-
+import { Link } from "react-router-dom"
 
 const FetchCardDetails = () => {
     const [cards, setCards] = useState([])
@@ -39,7 +39,8 @@ const config = useSelector(state => state.config)
 
 
     return (
-        <Grid container spacing={3}>
+        
+        <Grid  container spacing={3}>
             {cards.map(card => (
                 <Grid item xs={12} sm={6} md={3} key={card.id}>
                     <Card>
@@ -70,12 +71,14 @@ const config = useSelector(state => state.config)
                         </CardContent>
                         <CardActions style={config.darkMode === "light" ? {backgroundColor: "white"} : {backgroundColor: "black"}}>
                             <Button size="small" onClick={()=> Delete(card.id)}> <DeleteForeverIcon/></Button>
-                            <Button size="small" > <EditIcon/> </Button>
+                            <Button href={`/show/${card.id}`} size="small" > <EditIcon/>
+                            </Button>
                          </CardActions>
                     </Card>
                 </Grid>
             ))}
         </Grid>
+       
     )
 }
 export default FetchCardDetails;
