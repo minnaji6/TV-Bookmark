@@ -9,7 +9,7 @@ import Container1 from './Theme/Componets.js/Container1';
 import { darkModeAction } from './actions/config_action';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AddShows from './Componets/AddShows';
+import ShowForm from './Componets/ShowForm';
 import ManageShows from './Componets/ManageShows';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
@@ -42,7 +42,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/manageShows" element={<ManageShows/>}></Route>
-          <Route path="/show/new" element={<AddShows/>} ></Route>
+          <Route path="/show/new" element={<ShowForm/>} ></Route>
           
       </Routes>
       <nav style={{ padding: '2rem 0 ', textAlign: 'center' }}>

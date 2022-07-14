@@ -8,7 +8,7 @@ const ShowListing= () => {
   // console.log(shows)
 
   return (
-    <div>ShowsListing</div>
+    <></>
   )
 }
 
