@@ -91,7 +91,7 @@ function ShowForm() {
       autoComplete="off"
     >
       <div>
-        <TextField
+      <TextField
           required
           id="outlined-required"
           label="Name"
@@ -99,14 +99,7 @@ function ShowForm() {
           onChange={handleChange}
           value={formState.name}
         />
-        <TextField
-          required
-          id="outlined-required"
-          name="show_tags"
-          label="tags"
-          onChange={handleChange}
-          value={formState.show_tags}
-        />
+        
         <TextField
           required
           id="outlined-required"
@@ -114,6 +107,15 @@ function ShowForm() {
           name="image"
           onChange={handleChange}
           value={formState.image}
+        />
+
+        <TextField
+          required
+          id="outlined-required"
+          name="show_tags"
+          label="tags"
+          onChange={handleChange}
+          value={formState.show_tags}
         />
         <TextField
           required
@@ -127,7 +129,7 @@ function ShowForm() {
         <TextField
           required
           id="outlined-required"
-          label="showId"
+          label="Season"
           name="show_season"
           onChange={handleChange}
           value={formState.show_season}
@@ -139,6 +141,8 @@ function ShowForm() {
           name="show_episode"
           onChange={handleChange}
           value={formState.show_episode}
+
+          
         />
 
         

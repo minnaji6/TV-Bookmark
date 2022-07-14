@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :tags
   resources :shows
 
-  
+  post '/shows/:id', to: 'shows#create'
   require 'sidekiq/web'
   mount Sidekiq::Web, at: '/sidekiq'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
