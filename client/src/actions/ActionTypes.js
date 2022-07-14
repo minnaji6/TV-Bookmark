@@ -1,0 +1,5 @@
+export const ActionTypes = {
+    SET_SHOWS: "SET_SHOWS",
+    SELECTED_SHOW: "SELECTED_SHOW",
+    REMOVE_SELECTED_SHOW: "REMOVE_SELECTED_SHOW",
+};

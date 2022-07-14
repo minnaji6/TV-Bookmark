@@ -13,7 +13,7 @@ function NavBar() {
 
 <br/>
 <div className="logo">
-  <Link to ="/home">
+  <Link to ="/">
 <img src="https://i.ibb.co/LppH4B9/Screen-Shot-2022-07-11-at-10-48-58-AM-removebg-preview.png" height={150} alt="LOGO" title="TV BOOKMARK LOGO"/>
 </Link>
 </div>
@@ -21,7 +21,7 @@ function NavBar() {
 
 <div className="App-nav">
 <ButtonGroup variant="contained" aria-label="outlined primary button group">
-  <Button href="/home" ><HomeIcon/>HOME</Button>
+  <Button href="/" ><HomeIcon/>HOME</Button>
   <Button href="/manageShows"><ManageSearchIcon/>MANAGE SHOWS</Button>
   <Button href="/show/new"><QueuePlayNextIcon/> ADD NEW SHOW</Button>
 </ButtonGroup>

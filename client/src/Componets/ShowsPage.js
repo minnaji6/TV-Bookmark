@@ -1,19 +1,26 @@
 import  { useState, useEffect} from 'react';
 import axios from 'axios';
 import "../App.css"
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addShows } from '../reducers/showSlice'
 import { useParams } from 'react-router-dom';
+import { setShows } from '../actions/showActions';
+
+
+
 
 
 const ShowsPage = () => {
     const dispatch = useDispatch();
-    // const data = useSelector(getSelectedShow)
+    const shows = useSelector((state) => state.allShows.shows);
+    console.log(shows);
+    // const { id, name, image, show_tags, show_comment, show_season, show_episode } = shows;
+   
 
     useEffect(() => {
         axios.get('http://localhost:3000/shows/')
-        .then(res =>  dispatch(addShows(res.data)))
-        console.log(shows)
+        .then(res =>  dispatch(setShows(res.data)))
+       
     }, [])
 
     
@@ -21,7 +28,9 @@ const ShowsPage = () => {
 
     return (
     
-        <div>
+        <div className="showsPage">
+            <h1>Shows</h1>
+            
            
 
         </div>

@@ -40,7 +40,7 @@ function App() {
     <Container1 >
       <NavBar/> 
       <Routes>
-          <Route path="/home" element={<Home/>}></Route>
+          <Route path="/" element={<Home/>}></Route>
           <Route path="/manageShows" element={<ManageShows/>}></Route>
           <Route path="/show/new" element={<AddShows/>} ></Route>
           

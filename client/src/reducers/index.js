@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import config from './config_reducer';
-import showsReducer from "./showSlice";
+import {showReducer} from "./showReducer";
 
 
 
 const rootReducer = combineReducers(
 {
     config: config,
-    shows: showsReducer
+    allShows: showReducer
 });
 export default rootReducer;

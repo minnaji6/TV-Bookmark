@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux'
 import { getAllShows } from '../reducers/showSlice'
 
 const ShowListing= () => {
-  const shows = useSelector(getAllShows);
+  // const shows = useSelector(getAllShows);
   
-  console.log(shows)
+  // console.log(shows)
 
   return (
     <div>ShowsListing</div>
