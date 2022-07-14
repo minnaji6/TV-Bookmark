@@ -19,7 +19,7 @@ const FetchCardsHome = () => {
             {cards.map(card => {
                 return(
                     <motion.div className= "item"  key={card.id}>
-                    <img src={card.image} alt={card.name}/>
+                    <img src={card.image} title={card.name}/>
                     </motion.div>
                 );
             })}

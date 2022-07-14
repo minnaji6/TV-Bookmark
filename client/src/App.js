@@ -14,6 +14,7 @@ import ManageShows from './Componets/ManageShows';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import {configureStore} from '@reduxjs/toolkit'
+import PageFooter from './Componets/PageFooter';
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
         <Button onClick={() => themeChange('light')}><LightModeIcon/></Button>
       </nav>
       </Container1>
+      <PageFooter/>
      
     </ThemeProvider>
    

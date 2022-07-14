@@ -11,6 +11,7 @@ import promiseMiddleware from 'redux-promise';
 import ReduxThunk from 'redux-thunk';
 import css from './App.css';
 import {configureStore} from '@reduxjs/toolkit'
+import { store1 } from './store1';
 
 
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
@@ -19,7 +20,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider 
-      store={createStoreWithMiddleware(Reducer, window._REDUX_DEVTOOLS_EXTENSIONS__ && window._REDUX_DEVTOOLS_EXTENSIONS__())}>
+      store={createStoreWithMiddleware(Reducer, window._REDUX_DEVTOOLS_EXTENSIONS__ && window._REDUX_DEVTOOLS_EXTENSIONS__())}  store1={store1}>
+     
     <App />
     </Provider>
   </React.StrictMode>

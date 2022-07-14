@@ -3,6 +3,7 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import HomeIcon from '@mui/icons-material/Home';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import QueuePlayNextIcon from '@mui/icons-material/QueuePlayNext';
+import { Link } from 'react-router-dom';
 
 
 function NavBar() {
@@ -12,7 +13,9 @@ function NavBar() {
 
 <br/>
 <div className="logo">
-<img src="https://i.ibb.co/LppH4B9/Screen-Shot-2022-07-11-at-10-48-58-AM-removebg-preview.png" alt="LOGO"/>
+  <Link to ="/home">
+<img src="https://i.ibb.co/LppH4B9/Screen-Shot-2022-07-11-at-10-48-58-AM-removebg-preview.png" height={150} alt="LOGO" title="TV BOOKMARK LOGO"/>
+</Link>
 </div>
 <br/>
 

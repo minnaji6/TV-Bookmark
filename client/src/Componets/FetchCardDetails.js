@@ -53,14 +53,14 @@ const config = useSelector(state => state.config)
                                 {card.name}
                                 <Chip label={card.show_tags} color={card.show_tags === 'cancelled' ? 'error' : card.show_tags === 'watching' ? 'success' : card.show_tags === 'upcoming' ? 'info' : card.show_tags === 'want to watch' ? 'warning' : 'primary'}/>
                             </Typography>
-                            <div style={{backgroundColor:"#1e81b0"}}>
-                            <Typography variant="caption" color="text.secondary"  fontSize="1em" fontWeight="bold">
-                            {card.show_comments}
+                            <Box style={{backgroundColor:"#3376d2"}}>
+                            <Typography component="span" variant="caption" color="text.secondary"  fontSize="1em" fontWeight="bold">
+                            {card.show_comment}
                             </Typography>
-                            </div>
+                            </Box>
                             <br/>
-                            <Typography  > 
-                               <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
+                            <Typography  component="span"  > 
+                               <Box  style={config.darkMode === "light" ? {backgroundColor: ""} : {backgroundColor: "#3376d2"}} component="span" sx={{ p: 2, border: '1px dashed grey' }}>
                                 SEASON  
                                 <Chip label={card.show_season}/>
                                 EPISODE  
