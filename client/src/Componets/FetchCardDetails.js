@@ -23,7 +23,7 @@ const FetchCardDetails = () => {
 
            axios.delete('http://localhost:3000/shows/' + id)
            .then(res => setCards(res.data))
-           console.log(setCards)
+        //    console.log(setCards)
     } 
 
 
