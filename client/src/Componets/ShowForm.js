@@ -76,7 +76,9 @@ function ShowForm() {
     <>
     <div className="ShowForm-container">
         
-        Add New Show
+       <Box style={{backgroundColor:"#3376d2"}}>
+        <Typography colour="inherit" > Add New Show </Typography>
+        </Box>
         <br/>
         
 
@@ -125,7 +127,7 @@ function ShowForm() {
         <TextField
           required
           id="outlined-required"
-          label="SEASON"
+          label="showId"
           name="show_season"
           onChange={handleChange}
           value={formState.show_season}
@@ -170,36 +172,26 @@ function ShowForm() {
       <br/>
       <br/>
       <Stack sx={{width: 300, margin: "auto"}}>
-            {/* <Autocomplete
+            <Autocomplete
             id="nba_player"
-            getOptionLabel={(selectedPlayer) => `${selectedPlayer.name}`}
-            options={selectedPlayer}
+            getOptionLabel={(selectedShow) => `${selectedShow.name}`}
+            options={selectedShow}
             sx={{width: 300}}
             isOptionEqualToValue={(option, value) => 
                 option.name === value.name
             }
-            noOptionsText={"Player Not Added"}
-            renderOption={(props, selectedPlayer) => (
-              <Box componet="li"{...props} key={selectedPlayer.id}>
-                   {selectedPlayer.name}
+            noOptionsText={"Show Not Added"}
+            renderOption={(props, selectedShow) => (
+              <Box componet="li"{...props} key={selectedShow.id}>
+                   {selectedShow.name}
                 </Box> 
                 
             )}
-            renderInput={(params) => <TextField {...params} label="Search for an added Player TO EDIT"/>}
-            /> */}
-            <select value={showId} onChange={(e)=> setShowId(e.target.value)}>
-                  {selectedShow.map(show=>(
-                    <option value={show.id}key={show.id}>{show.name}</option>
-                  ))}
-                </select>
-                <Button
-                onClick={() => {
-                  editShow(showId);
-                  alert('SHOW EDITTED');
-                }}
-              >
-                EDIT 
-            </Button>
+            renderInput={(params) => <TextField {...params} label="Search for an added Show"/>}
+            />
+            <Box  style={{backgroundColor:"#3376d2"}}>
+            
+            </Box>
             
         </Stack>
         </div>
