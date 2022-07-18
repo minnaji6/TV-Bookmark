@@ -6,14 +6,30 @@ import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import Stack from "@mui/material/Stack";
 import { Autocomplete } from "@mui/material";
 import axios from 'axios';
 import * as React from 'react';
+import FetchCardDetailsOngoing from './FetchCardDetailsOngoing';
+import FetchCardDetailsCancelled from './FetchCardDetailsCancelled';
 
 
 function ManageShows() {
+  const [tag, setTag] = useState("");
+  const [ongoingVisible, setOngoingVisible] = useState(false);
+  const [cancelledVisible, setCancelledVisible] = useState(false);
+
+  const handleOnChange = (e) => {
+    setTag(e.target.value);
+  }
+
+  useEffect(() => {
+    tag === "ongoing" ? setOngoingVisible(true) : setOngoingVisible(false);
+    tag === "cancelled" ? setCancelledVisible(true) : setCancelledVisible(false);
+  }, [tag])
+
+
   const [selectedShow, setSelectedShow] = React.useState(['']);
 
      axios.get('http://localhost:3000/shows/')
@@ -69,22 +85,27 @@ function ManageShows() {
       <br/>
 
 
-      <select> 
-        <option value="1">ongoing</option>
-        <option value="2">cancelled</option>
+      <select  onChange={handleOnChange} value={tag}> 
+        <option value="ongoing">ongoing</option>
+        <option value="cancelled">cancelled</option>
         <option value="3">upcoming</option>
         <option value="4">finished</option>
         <option value="5">watching</option>
         <option value="6">want to watch</option>
       </select>
 
-      {/* render shows based on tag here */}
+      
+      {ongoingVisible && <FetchCardDetailsOngoing/>}
+      {cancelledVisible && <FetchCardDetailsCancelled/>}
+      {!ongoingVisible && !cancelledVisible && <FetchCardDetails/>}
+
       <br/>
       <br/>
 
       </div>
+      
 
-      <FetchCardDetails />
+
 
 
 
