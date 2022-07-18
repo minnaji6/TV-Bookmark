@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :tags
   resources :shows
 
+  get 'search' => 'shows#search'
+
   
   require 'sidekiq/web'
   mount Sidekiq::Web, at: '/sidekiq'

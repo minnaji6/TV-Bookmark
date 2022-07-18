@@ -3,6 +3,7 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import HomeIcon from '@mui/icons-material/Home';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import QueuePlayNextIcon from '@mui/icons-material/QueuePlayNext';
+import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom';
 
 
@@ -24,6 +25,7 @@ function NavBar() {
   <Button href="/" ><HomeIcon/>HOME</Button>
   <Button href="/manageShows"><ManageSearchIcon/>MANAGE SHOWS</Button>
   <Button href="/show/new"><QueuePlayNextIcon/> ADD NEW SHOW</Button>
+  <Button href="/search"><SearchIcon/>SEARCH</Button>
 </ButtonGroup>
 
 </div>
