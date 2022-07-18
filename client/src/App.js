@@ -15,6 +15,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import {configureStore} from '@reduxjs/toolkit'
 import PageFooter from './Componets/PageFooter';
+import ShowsPage from './Componets/ShowsPage';
 
 function App() {
 
@@ -43,7 +44,7 @@ function App() {
           <Route path="/" element={<Home/>}></Route>
           <Route path="/manageShows" element={<ManageShows/>}></Route>
           <Route path="/show/new" element={<AddShows/>} ></Route>
-          
+          <Route path="/show/:showId" element={<ShowsPage/>}></Route>
       </Routes>
       <nav style={{ padding: '2rem 0 ', textAlign: 'center' }}>
         <Button onClick={() => themeChange('dark')}><DarkModeIcon/></Button>

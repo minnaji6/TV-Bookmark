@@ -1,15 +1,11 @@
-// import React from 'react'
-// import ShowsComponent from './ShowsComponent'
+import React from 'react'
+import ShowsPage from './ShowsPage'
 
-// function AddShows() {
-//   return (
-//     <div>Shows
-      
-//       <ShowsComponent />
-      
-//        Form</div>
+function AddShows() {
+  return (
+    <>  </>
+    // <ShowsPage/>
+  )
+}
 
-//   )
-// }
-
-// export default AddShows
+export default AddShows
