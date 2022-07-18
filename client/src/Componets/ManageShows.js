@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import FetchCardDetails from './FetchCardDetails';
 import SearchIcon from '@mui/icons-material/Search';
+import ShowsPage from './ShowsPage';
 
 
 function ManageShows() {
@@ -49,6 +50,7 @@ function ManageShows() {
       </div>
 
       <FetchCardDetails />
+      <ShowsPage/>
 
 
 

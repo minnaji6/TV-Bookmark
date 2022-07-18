@@ -9,23 +9,23 @@ import { setShows } from '../actions/showActions';
 
 
 
-
 const ShowsPage = () => {
-    const dispatch = useDispatch();
     const shows = useSelector((state) => state.allShows.shows);
-    console.log(shows);
-    // const { id, name, image, show_tags, show_comment, show_season, show_episode } = shows;
-   
-
+    const dispatch = useDispatch();
+    const fetchShows = async () => {
+      const response = await axios
+        .get("http://localhost:3000/shows")
+        .catch((err) => {
+          console.log("Err: ", err);
+        });
+      dispatch(setShows(response.data));
+    };
+  
     useEffect(() => {
-        axios.get('http://localhost:3000/shows/')
-        .then(res =>  dispatch(setShows(res.data)))
-       
-    }, [])
-
-    
-
-
+      fetchShows();
+    }, []);
+  
+    console.log("Shows :", shows);
     return (
     
         <div className="showsPage">
