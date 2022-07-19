@@ -5,6 +5,7 @@ import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import QueuePlayNextIcon from '@mui/icons-material/QueuePlayNext';
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom';
+import StarIcon from '@mui/icons-material/Star';
 
 
 function NavBar() {
@@ -25,7 +26,7 @@ function NavBar() {
   <Button href="/" ><HomeIcon/>HOME</Button>
   <Button href="/manageShows"><ManageSearchIcon/>MANAGE SHOWS</Button>
   <Button href="/show/new"><QueuePlayNextIcon/> ADD NEW SHOW</Button>
-  <Button href="/search"><SearchIcon/>SEARCH</Button>
+  <Button href="/search"><StarIcon/> WATCH WISHLIST</Button>
 </ButtonGroup>
 
 </div>

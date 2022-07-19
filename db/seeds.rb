@@ -14,7 +14,7 @@ end
 
 
 puts "Seeding tags... #"
-Tag.create([{tag:"ongoing"},{tag:"cancelled"}, {tag:"upcoming"}, {tag:"finished"}, {tag:"watching"}, {tag:"want_to_watch"}])
+Tag.create([{tag:"ongoing"},{tag:"cancelled"}, {tag:"upcoming"}, {tag:"finished"}, {tag:"watching"}, {tag:"want to watch"}])
 
 
 puts "Seeding comments... 📝 "
