@@ -12,11 +12,11 @@ class ShowsController < ApplicationController
    render json: @show
   end
 
-  def search
-    @shows = Show.where("name LIKE ?","%"+ params[:q] +"%")
-    render json: @shows
+  # def search
+  #   @shows = Show.where("name LIKE ?","%"+ params[:q] +"%")
+  #   render json: @shows
 
-  end
+  # end
 
   # GET /shows/new
   def new

@@ -18,12 +18,12 @@ const Watchlist = () => {
                 <Grid item xs={12} sm={6} md={3} key={card.id}>
                     <Card>
                         <CardMedia style = {{ height: 3, paddingTop: '56%'}}
-                            image={card.image}
-                            title={card.show_id}
+                            image={card.show_image}
+                            title={card.show_name}
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="h2">
-                                {card.name}
+                                {card.show_name}
                             </Typography>
                         </CardContent>
                     </Card>

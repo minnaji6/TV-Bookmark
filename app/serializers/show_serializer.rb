@@ -1,5 +1,6 @@
 class ShowSerializer < ActiveModel::Serializer
   attributes :id, :name, :image, :show_tags, :show_comment, :show_season, :show_episode
+
   
 
   def show_tags

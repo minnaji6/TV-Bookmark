@@ -26,6 +26,14 @@ csv.each do |row|
     c.save
 end
 
+
+puts "Seeding seasons... 🎭"
+csv.each do |row|
+    sn = Season.new
+    sn.season_number = row['season_number']
+    sn.save
+end
+
 puts "Seeding episodes... 📺 "
 csv.each do |row|
     e = Episode.new
@@ -33,13 +41,6 @@ csv.each do |row|
     e.season_id = row['season_id']
     e.show_id = row['show_id']
     e.save
-end
-
-puts "Seeding seasons... 🎭"
-csv.each do |row|
-    sn = Season.new
-    sn.season_number = row['season_number']
-    sn.save
 end
 
 puts "📺 Done seeding! 🎞"
