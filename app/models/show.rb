@@ -23,6 +23,10 @@ def permited_image
     end
 end
 
+def Shows_sort_by_name
+    Show.order(:tag_id)
+end
+
 def self.search_by_tag_and_name(tag="nil", name="nil")
     if tag && name
         Show.join(:comments).where("tags.tag LIKE ? AND shows.name LIKE ?", "%#{tag}%", "%#{name}%")
