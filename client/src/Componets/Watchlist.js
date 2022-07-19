@@ -3,23 +3,15 @@ import axios from 'axios'
 import { Grid, Card, CardMedia, CardContent, Typography, CardActions, Button }  from "@mui/material";
 
 
-const FetchCards = () => {
+const Watchlist = () => {
     const [cards, setCards] = useState([])
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/shows`)
+        axios.get(`http://localhost:3000/wishlist`)
         .then(res => setCards(res.data))
         
     }, [])
-
-     const Delete = (id) => {
-           setCards(prevCards=> {
-            return prevCards.filter(card=> card.id != id)
-           })
-    } 
-
     
-
     return (
         <Grid container spacing={3}>
             {cards.map(card => (
@@ -27,7 +19,7 @@ const FetchCards = () => {
                     <Card>
                         <CardMedia style = {{ height: 3, paddingTop: '56%'}}
                             image={card.image}
-                            title={card.name}
+                            title={card.show_id}
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="h2">
@@ -40,4 +32,4 @@ const FetchCards = () => {
         </Grid>
     )
 }
-export default FetchCards;
+export default Watchlist;

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'search' => 'shows#search'
 
+  get 'wishlist' => 'comments#wishlist'
   
   require 'sidekiq/web'
   mount Sidekiq::Web, at: '/sidekiq'

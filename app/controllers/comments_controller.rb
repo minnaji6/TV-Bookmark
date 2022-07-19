@@ -17,6 +17,11 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
 
+  def wishlist
+    @comments = Comment.where(tag_id: "6")
+    render json: @comments
+  end
+
   # GET /comments/1/edit
   def edit
   end
