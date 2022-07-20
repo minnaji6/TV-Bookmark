@@ -6,16 +6,8 @@ class Show < ApplicationRecord
     has_many :seasons, through: :episodes
 
 
-    # validates :image, presence: true
-   
-
-    # validates :name, 
-    #       :presence => {:message => "Show can't be blank." },
-    #       :uniqueness => {:message => "Show already exists."},
-    #       :length => { :maximum => 40, :message => "Must be less than 40 characters"}
-
-    # validate :permited_image
-
+    validates :name, uniqueness: true
+    validate :permited_image
 
     def permited_image
         unless image.match(%r{^https?://artworks.thetvdb.com})

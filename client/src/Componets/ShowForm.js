@@ -44,22 +44,7 @@ function ShowForm() {
     .then(res => res.json())
     .then(data => {
       console.log(data)});}
-
-
-  const editShow = () => {
-  fetch(`http://localhost:3000/show/${showId}`,{
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accepts': 'application/json'
-    },
-    body: JSON.stringify(formState)
-  })
-  .then(res => res.json())
-  .then(data => {
-    console.log(data)});}
   
-
 
   const HtmlTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} classes={{ popper: className }} />
@@ -77,7 +62,7 @@ function ShowForm() {
     <>
     <div className="ShowForm-container">
         
-       <Box style={{backgroundColor:"#3376d2"}}>
+       <Box >
         <Typography colour="inherit" > Add New Show </Typography>
         </Box>
         <br/>
