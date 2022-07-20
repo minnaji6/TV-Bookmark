@@ -46,7 +46,7 @@ function App() {
           <Route path="/manageShows" element={<ManageShows/>}></Route>
           <Route path="/show/new" element={<AddShows/>} ></Route>
           <Route path="/show/:showId" element={<ShowsPage/>}></Route>
-          <Route path="/search" element={<Watchlist/>}></Route>
+          <Route path="/Watchlist" element={<Watchlist/>}></Route>
       </Routes>
       <nav style={{ padding: '2rem 0 ', textAlign: 'center' }}>
         <Button onClick={() => themeChange('dark')}><DarkModeIcon/></Button>

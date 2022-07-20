@@ -26,7 +26,7 @@ function NavBar() {
   <Button href="/" ><HomeIcon/>HOME</Button>
   <Button href="/manageShows"><ManageSearchIcon/>MANAGE SHOWS</Button>
   <Button href="/show/new"><QueuePlayNextIcon/> ADD NEW SHOW</Button>
-  <Button href="/search"><StarIcon/> WATCH WISHLIST</Button>
+  <Button href="/Watchlist"><StarIcon/> WATCH WISHLIST</Button>
 </ButtonGroup>
 
 </div>

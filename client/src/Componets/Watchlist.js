@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Grid, Card, CardMedia, CardContent, Typography, CardActions, Button }  from "@mui/material";
 
 
+
 const Watchlist = () => {
     const [cards, setCards] = useState([])
 
@@ -13,6 +14,7 @@ const Watchlist = () => {
     }, [])
     
     return (
+        <>
         <Grid container spacing={3}>
             {cards.map(card => (
                 <Grid item xs={12} sm={6} md={3} key={card.id}>
@@ -30,6 +32,8 @@ const Watchlist = () => {
                 </Grid>
             ))}
         </Grid>
+        
+        </>
     )
 }
 export default Watchlist;

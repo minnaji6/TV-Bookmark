@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
   # GET /comments or /comments.json
   def index
-    @comments = Comment.all
+    @comments = Comment.tagged
     render json: @comments
   end
 

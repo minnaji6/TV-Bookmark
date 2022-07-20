@@ -3,7 +3,7 @@ class ShowsController < ApplicationController
 
   # GET /shows or /shows.json
   def index
-    @shows = Show.all
+    @shows = Show.alpha
     render json: @shows
   end
 
