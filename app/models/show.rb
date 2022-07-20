@@ -7,6 +7,7 @@ class Show < ApplicationRecord
 
 
     validates :name, uniqueness: true
+    validates :name, presence: true
     validate :permited_image
 
     def permited_image
