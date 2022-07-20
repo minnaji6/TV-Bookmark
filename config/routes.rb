@@ -9,8 +9,8 @@ Rails.application.routes.draw do
 
   get 'wishlist' => 'comments#wishlist'
   
-  # require 'sidekiq/web'
-  # mount Sidekiq::Web, at: '/sidekiq'
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: '/sidekiq'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

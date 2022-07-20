@@ -3,10 +3,7 @@ class ShowJob < ApplicationJob
 
   def perform(show)
     show.update(name: show.name.titleize)
-    show.save
-    binding.irb
-    puts "🎬 #{show.name} was successfully updated. 🎬"
-    
+    show.save 
   end
   
 end

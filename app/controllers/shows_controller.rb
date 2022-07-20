@@ -34,9 +34,10 @@ class ShowsController < ApplicationController
     respond_to do |format|
       if @show.save
         # background_job to Titleize The Show Name
-        ShowJob.perform_now(Show.id)
+        
         format.html { redirect_to show_url(@show), notice: "Show was successfully added. Happy watching!" }
         format.json { render :show, status: :created, location: @show }
+        ShowJob.perform_now(Show.id)
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @show.errors, status: :unprocessable_entity }
