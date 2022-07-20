@@ -40,6 +40,17 @@
 .inner-carousel{
   display: flex;
 }
+.ShowForm-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #9d9a94;
+  color: white;
+  padding: 40px;
+}
 
 .carousel{
   cursor: grab;
