@@ -40,7 +40,7 @@ const Watchlist = () => {
                 </Grid>
             ))}
         </Grid>
-       <h3>Shows sorted by tags</h3>
+       <h3>All Shows sorted by tags</h3>
         <Grid container spacing={3}>
             {showlist.map(card => (
                 <Grid item xs={12} sm={6} md={3} key={card.id}>
@@ -48,10 +48,11 @@ const Watchlist = () => {
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="h2">
                                 {card.show_name}
+                                
                             </Typography>
 
                             <Typography variant="body2" color="textSecondary" component="p">
-                             {card.tag_id === 1 ? 'ONGOING' : card.tag_id === 2 ? 'CANCELLED' : card.tag_id === 3 ? 'UPCOMING' : card.tag_id === 4 ? 'FINISHED'  : card.tag_id === 5 ? 'WATCHING' : 'WANT TO WATCH'}
+                            <Chip label={card.tag_id === 1 ? 'ONGOING' : card.tag_id === 2 ? 'CANCELLED' : card.tag_id === 3 ? 'UPCOMING' : card.tag_id === 4 ? 'FINISHED'  : card.tag_id === 5 ? 'WATCHING' : 'WANT TO WATCH'} color={card.tag_id === 2 ? 'error' : card.tag_id === 5 ? 'success' : card.tag_id === 3 ? 'info' : card.tag_id === 6 ? 'warning' : 'primary'}></Chip>
 
                             </Typography>
                         </CardContent>
