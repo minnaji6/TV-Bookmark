@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import axios from 'axios'
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import EditIcon from '@mui/icons-material/Edit';
 import { useDispatch, useSelector } from 'react-redux';
 import { darkModeAction } from '../actions/config_action';
@@ -71,7 +72,7 @@ const config = useSelector(state => state.config)
                         </CardContent>
                         <CardActions style={config.darkMode === "light" ? {backgroundColor: "white"} : {backgroundColor: "black"}}>
                             <Button size="small" onClick={()=> Delete(card.id)}> <DeleteForeverIcon/></Button>
-                            <Button href={`/show/${card.id}`} size="small" > <EditIcon/>
+                            <Button href={`/show/${card.id}`} size="small" > <VisibilityIcon/>
                             </Button>
                          </CardActions>
                     </Card>
