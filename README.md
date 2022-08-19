@@ -1,6 +1,4 @@
-# README
-
-TV BOOKMARK | 
+# TV BOOKMARK README
 Your personal organizer for your favorite TV series | 
 React.js frontend and Ruby on Rails backend. |
 
