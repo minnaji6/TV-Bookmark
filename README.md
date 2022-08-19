@@ -1,3 +1,7 @@
 # README
 
-Application to bookmark TV series viewing history. React.js frontend and Ruby on Rails backend.
+TV BOOKMARK
+Your personal organizer for your favorite TV series
+React.js frontend and Ruby on Rails backend.
+Demo | https://vimeo.com/740085616 |
+
